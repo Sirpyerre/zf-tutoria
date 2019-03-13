@@ -17,8 +17,8 @@ class AlbumForm extends Form
         parent::__construct('album');
 
         $this->add([
-           'name' => 'id',
-           'type' => 'hidden'
+            'name' => 'id',
+            'type' => 'hidden'
         ]);
         $this->add([
             'name' => 'title',
@@ -28,13 +28,19 @@ class AlbumForm extends Form
             ]
         ]);
         $this->add([
-           'name' => 'artist',
-           'type' => 'text',
+            'name' => 'artist',
+            'type' => 'text',
+            'options' => [
+                'label' => 'Artist',
+            ]
+        ]);
+        $this->add([
+            'name' => 'submit',
+            'type' => 'submit',
             'attributes' => [
                 'value' => 'Go',
                 'id' => 'submitbutton'
             ]
-
         ]);
     }
 }

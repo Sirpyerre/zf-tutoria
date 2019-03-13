@@ -42,6 +42,7 @@ class AlbumTable
         $id = (int) $album->id;
 
         if($id === 0){
+//            exit(print_r($data));
             $this->tableGateway->insert($data);
             return;
         }
